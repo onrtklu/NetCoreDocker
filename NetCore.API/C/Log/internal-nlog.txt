@@ -1,0 +1,2357 @@
+2020-05-08 23:46:41.8141 Info Message Template Auto Format enabled
+2020-05-08 23:46:41.8400 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:46:41.8464 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:46:41.8662 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:46:41.8899 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:46:41.9075 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:46:41.9075 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:41.9255 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:41.9255 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:41.9255 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:41.9450 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:46:41.9450 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:46:41.9562 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:41.9562 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:41.9704 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:41.9704 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:41.9856 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:41.9856 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:41.9856 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.0012 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:42.0012 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:42.0012 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:42.0235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:42.0323 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:42.0323 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:46:42.0480 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:46:42.0480 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:46:42.0641 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:46:42.0641 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:46:42.0789 Trace ParseRulesElement
+2020-05-08 23:46:42.1093 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'NLog.config' for changes.
+2020-05-08 23:46:42.1179 Debug --- NLog configuration dump ---
+2020-05-08 23:46:42.1179 Debug Targets:
+2020-05-08 23:46:42.1325 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:42.1325 Debug Rules:
+2020-05-08 23:46:42.1479 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:46:42.1479 Debug --- End of NLog configuration dump ---
+2020-05-08 23:46:42.1665 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.1731 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:46:42.1731 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:46:42.1731 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:42.1970 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:42.2055 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:42.2224 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:42.2224 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:42.2363 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.2363 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.2363 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:42.2575 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:42.2575 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:42.2739 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.2818 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.2818 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:42.3042 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:42.3042 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:42.3169 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.3169 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:42.3320 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.3320 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:42.3320 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:42.3531 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:42.3614 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.3614 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:42.3614 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.3799 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:42.3799 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.3928 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:42.3928 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:46:42.4069 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:46:42.4069 Info Found 18 configuration items
+2020-05-08 23:46:42.4248 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:46:42.4248 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:46:42.4447 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:46:42.4447 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:42.4580 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:46:42.4580 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:42.4747 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:46:42.4747 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:46:42.4917 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.5013 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:42.5013 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.5013 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:42.5246 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:46:42.5318 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:42.5318 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:46:42.5318 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:46:42.5557 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.5557 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:42.5716 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.5808 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:42.5808 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.5972 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:42.5972 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:42.6141 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:42.6141 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.6309 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:42.6309 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.6470 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:42.6470 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.6638 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:42.6638 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:42.6804 Trace Initializing 'logevent'
+2020-05-08 23:46:42.6882 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.6882 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:42.7049 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.7049 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.7216 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:46:42.7216 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:42.7393 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:46:42.7393 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.7571 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:42.7571 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.7734 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.7734 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:42.7872 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:46:42.8224 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:42.8295 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:42.8295 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:42.8443 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:42.8443 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:42.8637 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:42.8637 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:42.8808 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:42.8808 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:42.8982 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:46:42.9118 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:42.9262 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:46:42.9262 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:42.9470 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:42.9667 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:46:43.0420 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:43.0521 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:43.0521 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:43.0715 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:43.0823 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:43.0823 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:43.1100 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:43.1201 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:43.1275 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:43.1275 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:43.1459 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:43.1459 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:43.1645 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:46:43.1737 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:46:43.1737 Info Configuration initialized.
+2020-05-08 23:46:43.1961 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.0.11381. Product version: 4.7.0+4d138800820311d0b60b6437f1dd2ed1d571d47d.
+2020-05-08 23:46:43.2092 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:46:43.2092 Debug Trace =>
+2020-05-08 23:46:43.2239 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.2239 Debug Info => ElasticSearch
+2020-05-08 23:46:43.2402 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.2402 Debug Error => ElasticSearch
+2020-05-08 23:46:43.2562 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.2715 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:46:43.2715 Debug Trace =>
+2020-05-08 23:46:43.2867 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.2867 Debug Info => ElasticSearch
+2020-05-08 23:46:43.3010 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.3010 Debug Error => ElasticSearch
+2020-05-08 23:46:43.3155 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.3155 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:46:43.3319 Debug Trace =>
+2020-05-08 23:46:43.3319 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.3450 Debug Info => ElasticSearch
+2020-05-08 23:46:43.3450 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.3450 Debug Error => ElasticSearch
+2020-05-08 23:46:43.3677 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.3816 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:46:43.3816 Debug Trace =>
+2020-05-08 23:46:43.3955 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.3955 Debug Info => ElasticSearch
+2020-05-08 23:46:43.4114 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.4114 Debug Error => ElasticSearch
+2020-05-08 23:46:43.4255 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.4508 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:46:43.4564 Debug Trace =>
+2020-05-08 23:46:43.4564 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.4696 Debug Info => ElasticSearch
+2020-05-08 23:46:43.4696 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.4696 Debug Error => ElasticSearch
+2020-05-08 23:46:43.4915 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.5077 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:46:43.5077 Debug Trace =>
+2020-05-08 23:46:43.5234 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.5234 Debug Info => ElasticSearch
+2020-05-08 23:46:43.5398 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.5478 Debug Error => ElasticSearch
+2020-05-08 23:46:43.5478 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.6119 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:46:43.6119 Debug Trace =>
+2020-05-08 23:46:43.6510 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.6616 Debug Info => ElasticSearch
+2020-05-08 23:46:43.6616 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.6827 Debug Error => ElasticSearch
+2020-05-08 23:46:43.6894 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.7120 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:46:43.7206 Debug Trace =>
+2020-05-08 23:46:43.7206 Debug Debug => ElasticSearch
+2020-05-08 23:46:43.7363 Debug Info => ElasticSearch
+2020-05-08 23:46:43.7363 Debug Warn => ElasticSearch
+2020-05-08 23:46:43.7517 Debug Error => ElasticSearch
+2020-05-08 23:46:43.7517 Debug Fatal => ElasticSearch
+2020-05-08 23:46:43.8731 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-05-08 23:46:43.8808 Debug Loading config from D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\Nlog.config
+2020-05-08 23:46:43.8808 Info Configuring from an XML element in D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\Nlog.config...
+2020-05-08 23:46:43.8957 Trace ParseNLogElement
+2020-05-08 23:46:43.8957 Trace ParseNLogConfig
+2020-05-08 23:46:43.9092 Info Message Template Auto Format enabled
+2020-05-08 23:46:43.9092 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:46:43.9092 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:46:43.9286 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:46:43.9286 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:46:43.9416 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:46:43.9416 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:43.9541 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:43.9541 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:43.9541 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:43.9744 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:46:43.9744 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:46:43.9877 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:43.9877 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:44.0005 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:44.0005 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:44.0005 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:44.0221 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:44.0221 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.0381 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:44.0381 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:44.0564 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:44.0655 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:44.0655 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:44.0809 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:46:44.0809 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:46:44.0960 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:46:44.0960 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:46:44.1127 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:46:44.1127 Trace ParseRulesElement
+2020-05-08 23:46:44.1290 Info Closing old configuration.
+2020-05-08 23:46:44.1290 Debug LogFactory Flush with timeout=15 secs
+2020-05-08 23:46:44.1507 Trace Flushing all 1 targets...
+2020-05-08 23:46:44.1617 Trace ForEachItemInParallel() 1 items
+2020-05-08 23:46:44.1749 Trace Continuation invoked: 
+2020-05-08 23:46:44.1749 Trace Parallel task completed. 0 items remaining
+2020-05-08 23:46:44.1921 Debug Flush completed
+2020-05-08 23:46:44.1921 Debug Closing logging configuration...
+2020-05-08 23:46:44.2099 Trace Closing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:44.2099 Debug Closing target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:46:44.2279 Debug Closed target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:46:44.2279 Trace Closing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:46:44.2406 Trace Closing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:46:44.2406 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:44.2551 Trace Closing Layout Renderer: ${date}
+2020-05-08 23:46:44.2551 Trace Closing 'logevent'
+2020-05-08 23:46:44.2688 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:44.2688 Trace Closing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:46:44.2825 Trace Closing Layout Renderer: ${longdate}
+2020-05-08 23:46:44.2825 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:44.2825 Trace Closing Layout Renderer: ${uppercase}
+2020-05-08 23:46:44.3032 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:46:44.3032 Trace Closing Layout Renderer: ${level}
+2020-05-08 23:46:44.3177 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:44.3177 Trace Closing Layout Renderer: ${logger}
+2020-05-08 23:46:44.3310 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:44.3310 Trace Closing Layout Renderer: ${message}
+2020-05-08 23:46:44.3449 Debug Finished closing logging configuration.
+2020-05-08 23:46:44.3449 Debug Stopping file watching for path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'NLog.config'
+2020-05-08 23:46:44.3604 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'Nlog.config' for changes.
+2020-05-08 23:46:44.3604 Debug --- NLog configuration dump ---
+2020-05-08 23:46:44.3604 Debug Targets:
+2020-05-08 23:46:44.3805 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:44.3805 Debug Rules:
+2020-05-08 23:46:44.3941 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:46:44.3941 Debug --- End of NLog configuration dump ---
+2020-05-08 23:46:44.3941 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:44.4123 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:46:44.4123 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:46:44.4261 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:44.4261 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:44.4429 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:44.4429 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:44.4561 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:44.4768 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.4768 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.4917 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:44.4917 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:44.5097 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:44.5166 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.5166 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.5166 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:44.5374 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:44.5374 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:44.5522 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.5522 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:44.5663 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.5663 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:44.5805 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:44.5805 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:44.5952 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.5952 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:44.5952 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.6167 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:44.6167 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.6318 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:44.6318 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:46:44.6461 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:46:44.6461 Info Found 18 configuration items
+2020-05-08 23:46:44.6611 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:46:44.6611 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:46:44.6745 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:46:44.6745 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:44.6888 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:46:44.6888 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:44.7037 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:46:44.7037 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:46:44.7037 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:44.7262 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:44.7262 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.7401 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:44.7401 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:46:44.7546 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:44.7546 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:46:44.7693 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:46:44.7693 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:44.7840 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:44.7840 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.7986 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:44.7986 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.7986 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:44.8215 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:44.8296 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:44.8296 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.8462 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:44.8462 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.8621 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:44.8621 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.8785 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:44.8785 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:44.8935 Trace Initializing 'logevent'
+2020-05-08 23:46:44.8935 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:44.8935 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:44.9129 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.9129 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.9287 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:46:44.9287 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:44.9438 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:46:44.9438 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:44.9596 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:44.9596 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:44.9735 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:44.9735 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:44.9877 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:46:44.9877 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:45.0022 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:45.0022 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:45.0022 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:45.0228 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:45.0228 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:45.0363 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:45.0363 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:45.0509 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:45.0509 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:46:45.0643 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:45.0643 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:46:45.0643 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:45.0850 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:45.0850 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:46:45.0992 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:45.0992 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:45.1135 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:45.1135 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:45.1314 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:45.1314 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:45.1468 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:45.1468 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:45.1612 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:45.1612 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:45.1774 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:45.1774 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:45.1908 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:46:45.1908 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:46:45.2066 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:46:45.2066 Debug Trace =>
+2020-05-08 23:46:45.2202 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.2202 Debug Info => ElasticSearch
+2020-05-08 23:46:45.2202 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.2413 Debug Error => ElasticSearch
+2020-05-08 23:46:45.2413 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.2548 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:46:45.2548 Debug Trace =>
+2020-05-08 23:46:45.2683 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.2683 Debug Info => ElasticSearch
+2020-05-08 23:46:45.2683 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.2879 Debug Error => ElasticSearch
+2020-05-08 23:46:45.2879 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.3001 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:46:45.3001 Debug Trace =>
+2020-05-08 23:46:45.3142 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.3142 Debug Info => ElasticSearch
+2020-05-08 23:46:45.3287 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.3287 Debug Error => ElasticSearch
+2020-05-08 23:46:45.3287 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.3459 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:46:45.3459 Debug Trace =>
+2020-05-08 23:46:45.3459 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.3660 Debug Info => ElasticSearch
+2020-05-08 23:46:45.3660 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.3798 Debug Error => ElasticSearch
+2020-05-08 23:46:45.3798 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.3931 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:46:45.3931 Debug Trace =>
+2020-05-08 23:46:45.3931 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.4128 Debug Info => ElasticSearch
+2020-05-08 23:46:45.4128 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.4265 Debug Error => ElasticSearch
+2020-05-08 23:46:45.4265 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.4393 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:46:45.4393 Debug Trace =>
+2020-05-08 23:46:45.4393 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.4600 Debug Info => ElasticSearch
+2020-05-08 23:46:45.4600 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.4735 Debug Error => ElasticSearch
+2020-05-08 23:46:45.4735 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.4887 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:46:45.4887 Debug Trace =>
+2020-05-08 23:46:45.5034 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.5034 Debug Info => ElasticSearch
+2020-05-08 23:46:45.5213 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.5213 Debug Error => ElasticSearch
+2020-05-08 23:46:45.5372 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.5372 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:46:45.5519 Debug Trace =>
+2020-05-08 23:46:45.5519 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.5648 Debug Info => ElasticSearch
+2020-05-08 23:46:45.5648 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.5648 Debug Error => ElasticSearch
+2020-05-08 23:46:45.5851 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.6073 Debug Targets for NetCore.API.Startup by level:
+2020-05-08 23:46:45.6135 Debug Trace =>
+2020-05-08 23:46:45.6135 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.6272 Debug Info => ElasticSearch
+2020-05-08 23:46:45.6272 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.6272 Debug Error => ElasticSearch
+2020-05-08 23:46:45.6463 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.6463 Debug Targets for Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware by level:
+2020-05-08 23:46:45.6596 Debug Trace =>
+2020-05-08 23:46:45.6596 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.6725 Debug Info => ElasticSearch
+2020-05-08 23:46:45.6725 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.6725 Debug Error => ElasticSearch
+2020-05-08 23:46:45.6906 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.6906 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-05-08 23:46:45.7044 Debug Trace =>
+2020-05-08 23:46:45.7044 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.7044 Debug Info => ElasticSearch
+2020-05-08 23:46:45.7236 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.7236 Debug Error => ElasticSearch
+2020-05-08 23:46:45.7236 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.7456 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-05-08 23:46:45.7520 Debug Trace =>
+2020-05-08 23:46:45.7520 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.7520 Debug Info => ElasticSearch
+2020-05-08 23:46:45.7717 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.7717 Debug Error => ElasticSearch
+2020-05-08 23:46:45.7845 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.7845 Debug Targets for Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware by level:
+2020-05-08 23:46:45.8045 Debug Trace =>
+2020-05-08 23:46:45.8045 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.8176 Debug Info => ElasticSearch
+2020-05-08 23:46:45.8357 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.8357 Debug Error => ElasticSearch
+2020-05-08 23:46:45.8566 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.9020 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-05-08 23:46:45.9111 Debug Trace =>
+2020-05-08 23:46:45.9111 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.9275 Debug Info => ElasticSearch
+2020-05-08 23:46:45.9275 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.9436 Debug Error => ElasticSearch
+2020-05-08 23:46:45.9436 Debug Fatal => ElasticSearch
+2020-05-08 23:46:45.9617 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-05-08 23:46:45.9617 Debug Trace =>
+2020-05-08 23:46:45.9761 Debug Debug => ElasticSearch
+2020-05-08 23:46:45.9761 Debug Info => ElasticSearch
+2020-05-08 23:46:45.9899 Debug Warn => ElasticSearch
+2020-05-08 23:46:45.9899 Debug Error => ElasticSearch
+2020-05-08 23:46:46.0335 Debug Fatal => ElasticSearch
+2020-05-08 23:46:46.0335 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-05-08 23:46:46.0548 Debug Trace =>
+2020-05-08 23:46:46.0548 Debug Debug => ElasticSearch
+2020-05-08 23:46:46.0726 Debug Info => ElasticSearch
+2020-05-08 23:46:46.0794 Debug Warn => ElasticSearch
+2020-05-08 23:46:46.0794 Debug Error => ElasticSearch
+2020-05-08 23:46:46.0794 Debug Fatal => ElasticSearch
+2020-05-08 23:46:46.4277 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-05-08 23:46:46.4277 Debug Trace =>
+2020-05-08 23:46:46.4412 Debug Debug => ElasticSearch
+2020-05-08 23:46:46.4412 Debug Info => ElasticSearch
+2020-05-08 23:46:46.4561 Debug Warn => ElasticSearch
+2020-05-08 23:46:46.4561 Debug Error => ElasticSearch
+2020-05-08 23:46:46.4708 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.5077 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-05-08 23:46:47.5077 Debug Trace =>
+2020-05-08 23:46:47.5254 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.5356 Debug Info => ElasticSearch
+2020-05-08 23:46:47.5356 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.5549 Debug Error => ElasticSearch
+2020-05-08 23:46:47.5549 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.6680 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-05-08 23:46:47.6735 Debug Trace =>
+2020-05-08 23:46:47.6735 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.6922 Debug Info => ElasticSearch
+2020-05-08 23:46:47.6922 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.7096 Debug Error => ElasticSearch
+2020-05-08 23:46:47.7096 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.7351 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-05-08 23:46:47.7440 Debug Trace =>
+2020-05-08 23:46:47.7512 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.7512 Debug Info => ElasticSearch
+2020-05-08 23:46:47.7698 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.7698 Debug Error => ElasticSearch
+2020-05-08 23:46:47.7853 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.7853 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-05-08 23:46:47.8027 Debug Trace =>
+2020-05-08 23:46:47.8027 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.8179 Debug Info => ElasticSearch
+2020-05-08 23:46:47.8179 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.8305 Debug Error => ElasticSearch
+2020-05-08 23:46:47.8305 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.8473 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter by level:
+2020-05-08 23:46:47.8473 Debug Trace =>
+2020-05-08 23:46:47.8614 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.8614 Debug Info => ElasticSearch
+2020-05-08 23:46:47.8614 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.8829 Debug Error => ElasticSearch
+2020-05-08 23:46:47.8829 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.8980 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter by level:
+2020-05-08 23:46:47.8980 Debug Trace =>
+2020-05-08 23:46:47.9112 Debug Debug => ElasticSearch
+2020-05-08 23:46:47.9112 Debug Info => ElasticSearch
+2020-05-08 23:46:47.9253 Debug Warn => ElasticSearch
+2020-05-08 23:46:47.9253 Debug Error => ElasticSearch
+2020-05-08 23:46:47.9387 Debug Fatal => ElasticSearch
+2020-05-08 23:46:47.9803 Debug Targets for NetCore.API.Controllers.WeatherForecastController by level:
+2020-05-08 23:46:47.9864 Debug Trace =>
+2020-05-08 23:46:47.9864 Debug Debug => ElasticSearch
+2020-05-08 23:46:48.0041 Debug Info => ElasticSearch
+2020-05-08 23:46:48.0041 Debug Warn => ElasticSearch
+2020-05-08 23:46:48.0208 Debug Error => ElasticSearch
+2020-05-08 23:46:48.0208 Debug Fatal => ElasticSearch
+2020-05-08 23:46:48.0475 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector by level:
+2020-05-08 23:46:48.0475 Debug Trace =>
+2020-05-08 23:46:48.0475 Debug Debug => ElasticSearch
+2020-05-08 23:46:48.0704 Debug Info => ElasticSearch
+2020-05-08 23:46:48.0784 Debug Warn => ElasticSearch
+2020-05-08 23:46:48.0784 Debug Error => ElasticSearch
+2020-05-08 23:46:48.0784 Debug Fatal => ElasticSearch
+2020-05-08 23:46:48.1004 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor by level:
+2020-05-08 23:46:48.1004 Debug Trace =>
+2020-05-08 23:46:48.1162 Debug Debug => ElasticSearch
+2020-05-08 23:46:48.1162 Debug Info => ElasticSearch
+2020-05-08 23:46:48.1300 Debug Warn => ElasticSearch
+2020-05-08 23:46:48.1300 Debug Error => ElasticSearch
+2020-05-08 23:46:48.1444 Debug Fatal => ElasticSearch
+2020-05-08 23:46:53.9859 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-05-08 23:46:53.9859 Debug Trace =>
+2020-05-08 23:46:54.0031 Debug Debug => ElasticSearch
+2020-05-08 23:46:54.0031 Debug Info => ElasticSearch
+2020-05-08 23:46:54.0203 Debug Warn => ElasticSearch
+2020-05-08 23:46:54.0203 Debug Error => ElasticSearch
+2020-05-08 23:46:54.0357 Debug Fatal => ElasticSearch
+2020-05-08 23:46:54.0480 Debug Targets for NetCore.API.Controllers.LogController by level:
+2020-05-08 23:46:54.0480 Debug Trace =>
+2020-05-08 23:46:54.0480 Debug Debug => ElasticSearch
+2020-05-08 23:46:54.0700 Debug Info => ElasticSearch
+2020-05-08 23:46:54.0700 Debug Warn => ElasticSearch
+2020-05-08 23:46:54.0827 Debug Error => ElasticSearch
+2020-05-08 23:46:54.0827 Debug Fatal => ElasticSearch
+2020-05-08 23:46:54.1226 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-05-08 23:46:54.1340 Debug Loading config from D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config
+2020-05-08 23:46:54.1340 Info Configuring from an XML element in D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config...
+2020-05-08 23:46:54.1466 Trace ParseNLogElement
+2020-05-08 23:46:54.1466 Trace ParseNLogConfig
+2020-05-08 23:46:54.1605 Info Message Template Auto Format enabled
+2020-05-08 23:46:54.1605 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:46:54.1739 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:46:54.1739 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:46:54.1739 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:46:54.1942 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:46:54.1942 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.2084 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:54.2084 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.2221 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:54.2221 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:46:54.2357 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:46:54.2357 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.2508 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:54.2508 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.2508 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:54.2744 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:54.2827 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:54.2827 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.2979 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:54.2979 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.2979 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:54.3192 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:46:54.3192 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:54.3327 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:46:54.3327 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:46:54.3462 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:46:54.3462 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:46:54.3462 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:46:54.3667 Trace ParseRulesElement
+2020-05-08 23:46:54.3667 Info Closing old configuration.
+2020-05-08 23:46:54.3802 Debug LogFactory Flush with timeout=15 secs
+2020-05-08 23:46:54.3802 Trace Flushing all 1 targets...
+2020-05-08 23:46:54.3933 Trace ForEachItemInParallel() 1 items
+2020-05-08 23:46:54.3933 Trace Continuation invoked: 
+2020-05-08 23:46:54.3933 Trace Parallel task completed. 0 items remaining
+2020-05-08 23:46:54.4145 Debug Flush completed
+2020-05-08 23:46:54.4145 Debug Closing logging configuration...
+2020-05-08 23:46:54.4295 Trace Closing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:54.4295 Debug Closing target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:46:54.4442 Debug Closed target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:46:54.4442 Trace Closing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:46:54.4575 Trace Closing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:46:54.4575 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:54.4721 Trace Closing Layout Renderer: ${date}
+2020-05-08 23:46:54.4721 Trace Closing 'logevent'
+2020-05-08 23:46:54.4721 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:54.4931 Trace Closing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:46:54.4931 Trace Closing Layout Renderer: ${longdate}
+2020-05-08 23:46:54.5066 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:54.5066 Trace Closing Layout Renderer: ${uppercase}
+2020-05-08 23:46:54.5184 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:46:54.5184 Trace Closing Layout Renderer: ${level}
+2020-05-08 23:46:54.5333 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:54.5333 Trace Closing Layout Renderer: ${logger}
+2020-05-08 23:46:54.5333 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:46:54.5538 Trace Closing Layout Renderer: ${message}
+2020-05-08 23:46:54.5538 Debug Finished closing logging configuration.
+2020-05-08 23:46:54.5689 Debug Stopping file watching for path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'Nlog.config'
+2020-05-08 23:46:54.5689 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'nlog.config' for changes.
+2020-05-08 23:46:54.5841 Debug --- NLog configuration dump ---
+2020-05-08 23:46:54.5841 Debug Targets:
+2020-05-08 23:46:54.5986 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:54.5986 Debug Rules:
+2020-05-08 23:46:54.6122 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:46:54.6122 Debug --- End of NLog configuration dump ---
+2020-05-08 23:46:54.6268 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:54.6268 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:46:54.6268 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:46:54.6472 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:54.6472 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:54.6602 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:54.6602 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:54.6771 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:54.6771 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.6905 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:54.6905 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:54.7039 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:54.7039 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:54.7039 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.7252 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:54.7252 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:54.7391 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:54.7391 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:54.7531 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.7531 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:54.7665 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:54.7665 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:54.7665 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:54.7865 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:54.7865 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.8014 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:54.8014 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:54.8193 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:54.8193 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:54.8333 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:54.8333 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:46:54.8476 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:46:54.8476 Info Found 18 configuration items
+2020-05-08 23:46:54.8627 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:46:54.8627 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:46:54.8769 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:46:54.8769 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:54.8769 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:46:54.8981 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:54.8981 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:46:54.9102 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:46:54.9102 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:54.9102 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:54.9299 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:54.9299 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:54.9439 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:46:54.9439 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:54.9574 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:46:54.9574 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:46:54.9739 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:54.9739 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:54.9924 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:55.0017 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:46:55.0017 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.0177 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:46:55.0177 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:46:55.0348 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:46:55.0348 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:55.0546 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:46:55.0673 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.0790 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:46:55.0790 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.0971 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:46:55.0971 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:55.1159 Trace Initializing 'logevent'
+2020-05-08 23:46:55.1159 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:55.1309 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:55.1416 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:55.1416 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.1416 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:46:55.1637 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:46:55.1637 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:46:55.1765 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:55.1765 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:55.1891 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:55.1891 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.2047 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:46:55.2047 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:46:55.2199 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:55.2199 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:55.2355 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:55.2355 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:55.2512 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:55.2512 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:55.2672 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:55.2672 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:55.2827 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:55.2827 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:46:55.2983 Trace FindReachableObject<System.Object>:
+2020-05-08 23:46:55.2983 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:46:55.3142 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:46:55.3142 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:46:55.3303 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:46:55.3303 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:46:55.3456 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:46:55.3456 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:46:55.3606 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:46:55.3606 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:46:55.3781 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:46:55.3781 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:46:55.3934 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:46:55.3934 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:46:55.4079 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:46:55.4079 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:46:55.4079 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:46:55.4286 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:46:55.4286 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:46:55.4425 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:46:55.4425 Debug Trace =>
+2020-05-08 23:46:55.4551 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.4551 Debug Info => ElasticSearch
+2020-05-08 23:46:55.4551 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.4745 Debug Error => ElasticSearch
+2020-05-08 23:46:55.4745 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.4859 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:46:55.4859 Debug Trace =>
+2020-05-08 23:46:55.4859 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.5082 Debug Info => ElasticSearch
+2020-05-08 23:46:55.5082 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.5210 Debug Error => ElasticSearch
+2020-05-08 23:46:55.5210 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.5342 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:46:55.5342 Debug Trace =>
+2020-05-08 23:46:55.5342 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.5538 Debug Info => ElasticSearch
+2020-05-08 23:46:55.5538 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.5659 Debug Error => ElasticSearch
+2020-05-08 23:46:55.5659 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.5787 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:46:55.5787 Debug Trace =>
+2020-05-08 23:46:55.5787 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.5983 Debug Info => ElasticSearch
+2020-05-08 23:46:55.5983 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.6112 Debug Error => ElasticSearch
+2020-05-08 23:46:55.6112 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.6112 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:46:55.6302 Debug Trace =>
+2020-05-08 23:46:55.6302 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.6439 Debug Info => ElasticSearch
+2020-05-08 23:46:55.6439 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.6439 Debug Error => ElasticSearch
+2020-05-08 23:46:55.6622 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.6622 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:46:55.6760 Debug Trace =>
+2020-05-08 23:46:55.6760 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.6760 Debug Info => ElasticSearch
+2020-05-08 23:46:55.6956 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.7043 Debug Error => ElasticSearch
+2020-05-08 23:46:55.7043 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.7232 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:46:55.7232 Debug Trace =>
+2020-05-08 23:46:55.7441 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.7510 Debug Info => ElasticSearch
+2020-05-08 23:46:55.7510 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.7665 Debug Error => ElasticSearch
+2020-05-08 23:46:55.7665 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.7842 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:46:55.7842 Debug Trace =>
+2020-05-08 23:46:55.8011 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.8011 Debug Info => ElasticSearch
+2020-05-08 23:46:55.8144 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.8144 Debug Error => ElasticSearch
+2020-05-08 23:46:55.8315 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.8315 Debug Targets for NetCore.API.Startup by level:
+2020-05-08 23:46:55.8472 Debug Trace =>
+2020-05-08 23:46:55.8472 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.8638 Debug Info => ElasticSearch
+2020-05-08 23:46:55.8638 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.8799 Debug Error => ElasticSearch
+2020-05-08 23:46:55.8799 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.8964 Debug Targets for Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware by level:
+2020-05-08 23:46:55.8964 Debug Trace =>
+2020-05-08 23:46:55.9113 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.9113 Debug Info => ElasticSearch
+2020-05-08 23:46:55.9267 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.9267 Debug Error => ElasticSearch
+2020-05-08 23:46:55.9420 Debug Fatal => ElasticSearch
+2020-05-08 23:46:55.9420 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-05-08 23:46:55.9603 Debug Trace =>
+2020-05-08 23:46:55.9603 Debug Debug => ElasticSearch
+2020-05-08 23:46:55.9744 Debug Info => ElasticSearch
+2020-05-08 23:46:55.9744 Debug Warn => ElasticSearch
+2020-05-08 23:46:55.9904 Debug Error => ElasticSearch
+2020-05-08 23:46:55.9904 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.0068 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-05-08 23:46:56.0164 Debug Trace =>
+2020-05-08 23:46:56.0164 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.0375 Debug Info => ElasticSearch
+2020-05-08 23:46:56.0375 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.0578 Debug Error => ElasticSearch
+2020-05-08 23:46:56.0717 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.0816 Debug Targets for Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware by level:
+2020-05-08 23:46:56.0816 Debug Trace =>
+2020-05-08 23:46:56.0996 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.0996 Debug Info => ElasticSearch
+2020-05-08 23:46:56.1156 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.1156 Debug Error => ElasticSearch
+2020-05-08 23:46:56.1319 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.1319 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-05-08 23:46:56.1497 Debug Trace =>
+2020-05-08 23:46:56.1578 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.1578 Debug Info => ElasticSearch
+2020-05-08 23:46:56.1727 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.1727 Debug Error => ElasticSearch
+2020-05-08 23:46:56.1727 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.1949 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-05-08 23:46:56.1949 Debug Trace =>
+2020-05-08 23:46:56.2117 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.2117 Debug Info => ElasticSearch
+2020-05-08 23:46:56.2271 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.2271 Debug Error => ElasticSearch
+2020-05-08 23:46:56.2436 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.2531 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-05-08 23:46:56.2531 Debug Trace =>
+2020-05-08 23:46:56.2686 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.2686 Debug Info => ElasticSearch
+2020-05-08 23:46:56.2833 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.2833 Debug Error => ElasticSearch
+2020-05-08 23:46:56.2982 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.2982 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-05-08 23:46:56.3144 Debug Trace =>
+2020-05-08 23:46:56.3144 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.3308 Debug Info => ElasticSearch
+2020-05-08 23:46:56.3308 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.3490 Debug Error => ElasticSearch
+2020-05-08 23:46:56.3490 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.3646 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-05-08 23:46:56.3646 Debug Trace =>
+2020-05-08 23:46:56.3772 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.3772 Debug Info => ElasticSearch
+2020-05-08 23:46:56.3915 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.3915 Debug Error => ElasticSearch
+2020-05-08 23:46:56.3915 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.4131 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-05-08 23:46:56.4131 Debug Trace =>
+2020-05-08 23:46:56.4294 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.4294 Debug Info => ElasticSearch
+2020-05-08 23:46:56.4439 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.4439 Debug Error => ElasticSearch
+2020-05-08 23:46:56.4587 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.4587 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-05-08 23:46:56.4726 Debug Trace =>
+2020-05-08 23:46:56.4726 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.4861 Debug Info => ElasticSearch
+2020-05-08 23:46:56.4861 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.4861 Debug Error => ElasticSearch
+2020-05-08 23:46:56.5069 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.5069 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-05-08 23:46:56.5215 Debug Trace =>
+2020-05-08 23:46:56.5215 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.5379 Debug Info => ElasticSearch
+2020-05-08 23:46:56.5379 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.5538 Debug Error => ElasticSearch
+2020-05-08 23:46:56.5538 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.5697 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter by level:
+2020-05-08 23:46:56.5697 Debug Trace =>
+2020-05-08 23:46:56.5842 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.5842 Debug Info => ElasticSearch
+2020-05-08 23:46:56.5989 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.5989 Debug Error => ElasticSearch
+2020-05-08 23:46:56.6144 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.6144 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter by level:
+2020-05-08 23:46:56.6280 Debug Trace =>
+2020-05-08 23:46:56.6280 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.6424 Debug Info => ElasticSearch
+2020-05-08 23:46:56.6424 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.6424 Debug Error => ElasticSearch
+2020-05-08 23:46:56.6635 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.6635 Debug Targets for NetCore.API.Controllers.WeatherForecastController by level:
+2020-05-08 23:46:56.6792 Debug Trace =>
+2020-05-08 23:46:56.6792 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.6937 Debug Info => ElasticSearch
+2020-05-08 23:46:56.6937 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.7085 Debug Error => ElasticSearch
+2020-05-08 23:46:56.7085 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.7224 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector by level:
+2020-05-08 23:46:56.7547 Debug Trace =>
+2020-05-08 23:46:56.7547 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.7709 Debug Info => ElasticSearch
+2020-05-08 23:46:56.7709 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.7870 Debug Error => ElasticSearch
+2020-05-08 23:46:56.7870 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.8013 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor by level:
+2020-05-08 23:46:56.8013 Debug Trace =>
+2020-05-08 23:46:56.8170 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.8170 Debug Info => ElasticSearch
+2020-05-08 23:46:56.8318 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.8318 Debug Error => ElasticSearch
+2020-05-08 23:46:56.8466 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.8466 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-05-08 23:46:56.8646 Debug Trace =>
+2020-05-08 23:46:56.8646 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.8824 Debug Info => ElasticSearch
+2020-05-08 23:46:56.8824 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.8962 Debug Error => ElasticSearch
+2020-05-08 23:46:56.8962 Debug Fatal => ElasticSearch
+2020-05-08 23:46:56.9119 Debug Targets for NetCore.API.Controllers.LogController by level:
+2020-05-08 23:46:56.9119 Debug Trace =>
+2020-05-08 23:46:56.9257 Debug Debug => ElasticSearch
+2020-05-08 23:46:56.9257 Debug Info => ElasticSearch
+2020-05-08 23:46:56.9413 Debug Warn => ElasticSearch
+2020-05-08 23:46:56.9413 Debug Error => ElasticSearch
+2020-05-08 23:46:56.9584 Debug Fatal => ElasticSearch
+2020-05-08 23:47:10.2091 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-05-08 23:47:10.2267 Debug Loading config from D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config
+2020-05-08 23:47:10.2267 Info Configuring from an XML element in D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config...
+2020-05-08 23:47:10.2440 Trace ParseNLogElement
+2020-05-08 23:47:10.2528 Trace ParseNLogConfig
+2020-05-08 23:47:10.2528 Info Message Template Auto Format enabled
+2020-05-08 23:47:10.2754 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:47:10.2857 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:47:10.2986 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:47:10.2986 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:47:10.3164 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:47:10.3164 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.3345 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:47:10.3345 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.3504 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:47:10.3504 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:47:10.3661 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:47:10.3661 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.3806 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:47:10.3806 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.3951 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:47:10.3951 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:47:10.4101 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:47:10.4101 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:10.4249 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:47:10.4249 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.4408 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:47:10.4408 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:47:10.4559 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:47:10.4559 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:47:10.4704 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:47:10.4704 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:47:10.4704 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:47:10.4927 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:47:10.4927 Trace ParseRulesElement
+2020-05-08 23:47:10.5090 Info Closing old configuration.
+2020-05-08 23:47:10.5090 Debug LogFactory Flush with timeout=15 secs
+2020-05-08 23:47:10.5229 Trace Flushing all 1 targets...
+2020-05-08 23:47:10.5229 Trace ForEachItemInParallel() 1 items
+2020-05-08 23:47:10.5353 Trace Continuation invoked: 
+2020-05-08 23:47:10.5353 Trace Parallel task completed. 0 items remaining
+2020-05-08 23:47:10.5503 Debug Flush completed
+2020-05-08 23:47:10.5503 Debug Closing logging configuration...
+2020-05-08 23:47:10.5651 Trace Closing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:47:10.5651 Debug Closing target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:47:10.5790 Debug Closed target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:47:10.5790 Trace Closing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:47:10.5790 Trace Closing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:47:10.5993 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:47:10.5993 Trace Closing Layout Renderer: ${date}
+2020-05-08 23:47:10.6121 Trace Closing 'logevent'
+2020-05-08 23:47:10.6121 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:47:10.6267 Trace Closing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:47:10.6267 Trace Closing Layout Renderer: ${longdate}
+2020-05-08 23:47:10.6418 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:47:10.6418 Trace Closing Layout Renderer: ${uppercase}
+2020-05-08 23:47:10.6418 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:47:10.6626 Trace Closing Layout Renderer: ${level}
+2020-05-08 23:47:10.6626 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:47:10.6771 Trace Closing Layout Renderer: ${logger}
+2020-05-08 23:47:10.6771 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:47:10.6924 Trace Closing Layout Renderer: ${message}
+2020-05-08 23:47:10.6924 Debug Finished closing logging configuration.
+2020-05-08 23:47:10.7041 Debug Stopping file watching for path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'nlog.config'
+2020-05-08 23:47:10.7041 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'nlog.config' for changes.
+2020-05-08 23:47:10.7216 Debug --- NLog configuration dump ---
+2020-05-08 23:47:10.7216 Debug Targets:
+2020-05-08 23:47:10.7419 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:47:10.7419 Debug Rules:
+2020-05-08 23:47:10.7568 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:47:10.7568 Debug --- End of NLog configuration dump ---
+2020-05-08 23:47:10.7714 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:10.7714 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:47:10.7838 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:47:10.7838 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:47:10.7838 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:47:10.8032 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:47:10.8032 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:47:10.8178 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:47:10.8178 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:10.8326 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:10.8326 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:47:10.8474 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:47:10.8474 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:47:10.8474 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:10.8676 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:10.8676 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:47:10.8810 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:47:10.8810 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:47:10.8942 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:10.8942 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:47:10.9097 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:10.9097 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:47:10.9228 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:47:10.9228 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:47:10.9228 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:10.9425 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:47:10.9425 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:10.9560 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:47:10.9560 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:10.9560 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:47:10.9752 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:47:10.9752 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:47:10.9881 Info Found 18 configuration items
+2020-05-08 23:47:10.9881 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:47:11.0011 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:47:11.0011 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:47:11.0011 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:47:11.0207 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:47:11.0207 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:47:11.0340 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:47:11.0340 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:47:11.0476 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:11.0476 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:47:11.0476 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.0675 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:47:11.0675 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:47:11.0811 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:47:11.0811 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:47:11.0947 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:47:11.0947 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:11.0947 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:47:11.1167 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.1167 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:47:11.1322 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.1322 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:47:11.1469 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:47:11.1469 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:47:11.1608 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.1608 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:47:11.1608 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.1795 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:47:11.1795 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.1942 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:47:11.1942 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:47:11.2085 Trace Initializing 'logevent'
+2020-05-08 23:47:11.2085 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:11.2218 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:47:11.2218 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.2355 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.2355 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:47:11.2355 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:47:11.2568 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:47:11.2568 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:11.2705 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:47:11.2705 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.2836 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.2836 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:47:11.2977 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:47:11.2977 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:47:11.2977 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:47:11.3174 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:47:11.3174 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:47:11.3304 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:47:11.3304 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:47:11.3471 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:47:11.3471 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:47:11.3624 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:47:11.3624 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:47:11.3789 Trace FindReachableObject<System.Object>:
+2020-05-08 23:47:11.3789 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:47:11.3925 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:47:11.3925 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:47:11.3925 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:47:11.4145 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:47:11.4230 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:47:11.4230 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:47:11.4230 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:47:11.4443 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:47:11.4443 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:47:11.4582 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:47:11.4582 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:47:11.4720 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:47:11.4720 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:47:11.4720 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:47:11.4908 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:47:11.4908 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:47:11.5030 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:47:11.5030 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:47:11.5030 Debug Trace =>
+2020-05-08 23:47:11.5226 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.5226 Debug Info => ElasticSearch
+2020-05-08 23:47:11.5442 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.5548 Debug Error => ElasticSearch
+2020-05-08 23:47:11.5548 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.5705 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:47:11.5705 Debug Trace =>
+2020-05-08 23:47:11.5845 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.5845 Debug Info => ElasticSearch
+2020-05-08 23:47:11.5975 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.5975 Debug Error => ElasticSearch
+2020-05-08 23:47:11.6108 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.6108 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:47:11.6108 Debug Trace =>
+2020-05-08 23:47:11.6321 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.6321 Debug Info => ElasticSearch
+2020-05-08 23:47:11.6458 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.6458 Debug Error => ElasticSearch
+2020-05-08 23:47:11.6597 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.6597 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:47:11.6733 Debug Trace =>
+2020-05-08 23:47:11.6733 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.6733 Debug Info => ElasticSearch
+2020-05-08 23:47:11.6915 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.6915 Debug Error => ElasticSearch
+2020-05-08 23:47:11.7037 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.7037 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:47:11.7037 Debug Trace =>
+2020-05-08 23:47:11.7287 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.7378 Debug Info => ElasticSearch
+2020-05-08 23:47:11.7378 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.7534 Debug Error => ElasticSearch
+2020-05-08 23:47:11.7534 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.7534 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:47:11.7746 Debug Trace =>
+2020-05-08 23:47:11.7746 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.7899 Debug Info => ElasticSearch
+2020-05-08 23:47:11.7899 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.8017 Debug Error => ElasticSearch
+2020-05-08 23:47:11.8017 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.8165 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:47:11.8165 Debug Trace =>
+2020-05-08 23:47:11.8285 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.8285 Debug Info => ElasticSearch
+2020-05-08 23:47:11.8285 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.8510 Debug Error => ElasticSearch
+2020-05-08 23:47:11.8510 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.8648 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:47:11.8648 Debug Trace =>
+2020-05-08 23:47:11.8782 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.8782 Debug Info => ElasticSearch
+2020-05-08 23:47:11.8918 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.8918 Debug Error => ElasticSearch
+2020-05-08 23:47:11.8918 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.9099 Debug Targets for NetCore.API.Startup by level:
+2020-05-08 23:47:11.9099 Debug Trace =>
+2020-05-08 23:47:11.9233 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.9233 Debug Info => ElasticSearch
+2020-05-08 23:47:11.9233 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.9442 Debug Error => ElasticSearch
+2020-05-08 23:47:11.9442 Debug Fatal => ElasticSearch
+2020-05-08 23:47:11.9582 Debug Targets for Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware by level:
+2020-05-08 23:47:11.9582 Debug Trace =>
+2020-05-08 23:47:11.9711 Debug Debug => ElasticSearch
+2020-05-08 23:47:11.9711 Debug Info => ElasticSearch
+2020-05-08 23:47:11.9711 Debug Warn => ElasticSearch
+2020-05-08 23:47:11.9898 Debug Error => ElasticSearch
+2020-05-08 23:47:11.9898 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.0037 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-05-08 23:47:12.0037 Debug Trace =>
+2020-05-08 23:47:12.0037 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.0229 Debug Info => ElasticSearch
+2020-05-08 23:47:12.0229 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.0350 Debug Error => ElasticSearch
+2020-05-08 23:47:12.0350 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.0350 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-05-08 23:47:12.0532 Debug Trace =>
+2020-05-08 23:47:12.0532 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.0669 Debug Info => ElasticSearch
+2020-05-08 23:47:12.0669 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.0799 Debug Error => ElasticSearch
+2020-05-08 23:47:12.0799 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.0799 Debug Targets for Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware by level:
+2020-05-08 23:47:12.0991 Debug Trace =>
+2020-05-08 23:47:12.0991 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.1119 Debug Info => ElasticSearch
+2020-05-08 23:47:12.1119 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.1119 Debug Error => ElasticSearch
+2020-05-08 23:47:12.1312 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.1312 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-05-08 23:47:12.1427 Debug Trace =>
+2020-05-08 23:47:12.1427 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.1427 Debug Info => ElasticSearch
+2020-05-08 23:47:12.1633 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.1633 Debug Error => ElasticSearch
+2020-05-08 23:47:12.1743 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.1743 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-05-08 23:47:12.1914 Debug Trace =>
+2020-05-08 23:47:12.1914 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.2051 Debug Info => ElasticSearch
+2020-05-08 23:47:12.2051 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.2051 Debug Error => ElasticSearch
+2020-05-08 23:47:12.2243 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.2243 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-05-08 23:47:12.2243 Debug Trace =>
+2020-05-08 23:47:12.2405 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.2405 Debug Info => ElasticSearch
+2020-05-08 23:47:12.2542 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.2542 Debug Error => ElasticSearch
+2020-05-08 23:47:12.2667 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.2667 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-05-08 23:47:12.2667 Debug Trace =>
+2020-05-08 23:47:12.2851 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.2851 Debug Info => ElasticSearch
+2020-05-08 23:47:12.2990 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.2990 Debug Error => ElasticSearch
+2020-05-08 23:47:12.2990 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.3205 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-05-08 23:47:12.3205 Debug Trace =>
+2020-05-08 23:47:12.3342 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.3342 Debug Info => ElasticSearch
+2020-05-08 23:47:12.3482 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.3482 Debug Error => ElasticSearch
+2020-05-08 23:47:12.3607 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.3607 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-05-08 23:47:12.3607 Debug Trace =>
+2020-05-08 23:47:12.3821 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.3821 Debug Info => ElasticSearch
+2020-05-08 23:47:12.3965 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.3965 Debug Error => ElasticSearch
+2020-05-08 23:47:12.4113 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.4113 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-05-08 23:47:12.4231 Debug Trace =>
+2020-05-08 23:47:12.4231 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.4231 Debug Info => ElasticSearch
+2020-05-08 23:47:12.4445 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.4445 Debug Error => ElasticSearch
+2020-05-08 23:47:12.4583 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.4583 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-05-08 23:47:12.4745 Debug Trace =>
+2020-05-08 23:47:12.4745 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.4881 Debug Info => ElasticSearch
+2020-05-08 23:47:12.4881 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.5008 Debug Error => ElasticSearch
+2020-05-08 23:47:12.5008 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.5008 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter by level:
+2020-05-08 23:47:12.5214 Debug Trace =>
+2020-05-08 23:47:12.5214 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.5341 Debug Info => ElasticSearch
+2020-05-08 23:47:12.5341 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.5341 Debug Error => ElasticSearch
+2020-05-08 23:47:12.5520 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.5520 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter by level:
+2020-05-08 23:47:12.5663 Debug Trace =>
+2020-05-08 23:47:12.5663 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.5798 Debug Info => ElasticSearch
+2020-05-08 23:47:12.5798 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.5798 Debug Error => ElasticSearch
+2020-05-08 23:47:12.6007 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.6007 Debug Targets for NetCore.API.Controllers.WeatherForecastController by level:
+2020-05-08 23:47:12.6133 Debug Trace =>
+2020-05-08 23:47:12.6133 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.6267 Debug Info => ElasticSearch
+2020-05-08 23:47:12.6267 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.6267 Debug Error => ElasticSearch
+2020-05-08 23:47:12.6458 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.6458 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector by level:
+2020-05-08 23:47:12.6586 Debug Trace =>
+2020-05-08 23:47:12.6586 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.6586 Debug Info => ElasticSearch
+2020-05-08 23:47:12.6757 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.6757 Debug Error => ElasticSearch
+2020-05-08 23:47:12.6885 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.6885 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor by level:
+2020-05-08 23:47:12.6885 Debug Trace =>
+2020-05-08 23:47:12.7068 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.7068 Debug Info => ElasticSearch
+2020-05-08 23:47:12.7068 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.7252 Debug Error => ElasticSearch
+2020-05-08 23:47:12.7252 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.7390 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-05-08 23:47:12.7390 Debug Trace =>
+2020-05-08 23:47:12.7520 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.7520 Debug Info => ElasticSearch
+2020-05-08 23:47:12.7520 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.7719 Debug Error => ElasticSearch
+2020-05-08 23:47:12.7719 Debug Fatal => ElasticSearch
+2020-05-08 23:47:12.7864 Debug Targets for NetCore.API.Controllers.LogController by level:
+2020-05-08 23:47:12.7864 Debug Trace =>
+2020-05-08 23:47:12.8000 Debug Debug => ElasticSearch
+2020-05-08 23:47:12.8000 Debug Info => ElasticSearch
+2020-05-08 23:47:12.8169 Debug Warn => ElasticSearch
+2020-05-08 23:47:12.8169 Debug Error => ElasticSearch
+2020-05-08 23:47:12.8306 Debug Fatal => ElasticSearch
+2020-05-08 23:49:43.3408 Info Message Template Auto Format enabled
+2020-05-08 23:49:43.3573 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:49:43.3649 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:49:43.3831 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:49:43.4109 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:49:43.4282 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:49:43.4384 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.4384 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:43.4572 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.4572 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:43.4755 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:49:43.4856 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:49:43.4856 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.4856 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:43.5072 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.5178 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:43.5349 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:43.5349 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:43.5538 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:43.5631 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:43.5631 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.5631 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:43.5865 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:43.5865 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:43.6029 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:49:43.6113 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:49:43.6113 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:49:43.6301 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:49:43.6301 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:49:43.6447 Trace ParseRulesElement
+2020-05-08 23:49:43.6803 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'NLog.config' for changes.
+2020-05-08 23:49:43.6908 Debug --- NLog configuration dump ---
+2020-05-08 23:49:43.6908 Debug Targets:
+2020-05-08 23:49:43.7146 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:43.7287 Debug Rules:
+2020-05-08 23:49:43.7386 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:49:43.7386 Debug --- End of NLog configuration dump ---
+2020-05-08 23:49:43.7582 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:43.7582 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:49:43.7734 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:49:43.7830 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:43.7830 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:43.7989 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:43.8156 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:43.8156 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:43.8156 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:43.8350 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:43.8350 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:43.8504 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:43.8504 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:43.8642 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:43.8642 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:43.8773 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:43.8928 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:43.8928 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:43.8928 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:43.9143 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:43.9143 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:43.9272 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:43.9272 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:43.9409 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:43.9409 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:43.9539 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:43.9539 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:43.9539 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:43.9741 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:43.9741 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:43.9874 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:49:43.9874 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:49:44.0010 Info Found 18 configuration items
+2020-05-08 23:49:44.0010 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:49:44.0223 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:49:44.0223 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:49:44.0355 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:44.0355 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:49:44.0499 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:44.0499 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:49:44.0655 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:49:44.0655 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:44.0817 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:44.0817 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.0941 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:44.0941 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:49:44.1107 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:44.1107 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:49:44.1107 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:49:44.1319 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:44.1319 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:44.1431 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.1431 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:44.1431 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.1630 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:44.1630 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:44.1763 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:44.1763 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.1895 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:44.1895 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.1895 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:44.2097 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.2097 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:44.2233 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:44.2233 Trace Initializing 'logevent'
+2020-05-08 23:49:44.2358 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:44.2358 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:44.2358 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.2565 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.2565 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:49:44.2705 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:44.2705 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:49:44.2839 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:44.2839 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:44.2839 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.3040 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.3040 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:44.3181 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:49:44.3493 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:44.3493 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:44.3602 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:44.3602 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:44.3602 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:44.3804 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:44.3804 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:44.3934 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:44.3934 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:44.4073 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:49:44.4073 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:44.4073 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:49:44.4285 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:44.4285 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:44.4486 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:49:44.4986 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:44.5061 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:44.5061 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:44.5237 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:44.5328 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:44.5328 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:44.5328 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:44.5540 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:44.5540 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:44.5677 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:44.5677 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:44.5806 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:44.5806 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:49:44.5941 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:49:44.5941 Info Configuration initialized.
+2020-05-08 23:49:44.6108 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.0.11381. Product version: 4.7.0+4d138800820311d0b60b6437f1dd2ed1d571d47d.
+2020-05-08 23:49:44.6108 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:49:44.6264 Debug Trace =>
+2020-05-08 23:49:44.6264 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.6264 Debug Info => ElasticSearch
+2020-05-08 23:49:44.6458 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.6458 Debug Error => ElasticSearch
+2020-05-08 23:49:44.6601 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.6601 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:49:44.6784 Debug Trace =>
+2020-05-08 23:49:44.6784 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.6922 Debug Info => ElasticSearch
+2020-05-08 23:49:44.6922 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.7061 Debug Error => ElasticSearch
+2020-05-08 23:49:44.7061 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.7192 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:49:44.7192 Debug Trace =>
+2020-05-08 23:49:44.7192 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.7431 Debug Info => ElasticSearch
+2020-05-08 23:49:44.7431 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.7578 Debug Error => ElasticSearch
+2020-05-08 23:49:44.7578 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.7742 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:49:44.7742 Debug Trace =>
+2020-05-08 23:49:44.7876 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.7876 Debug Info => ElasticSearch
+2020-05-08 23:49:44.8010 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.8010 Debug Error => ElasticSearch
+2020-05-08 23:49:44.8146 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.8341 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:49:44.8341 Debug Trace =>
+2020-05-08 23:49:44.8466 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.8466 Debug Info => ElasticSearch
+2020-05-08 23:49:44.8625 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.8625 Debug Error => ElasticSearch
+2020-05-08 23:49:44.8625 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.8864 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:49:44.8916 Debug Trace =>
+2020-05-08 23:49:44.8916 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.8916 Debug Info => ElasticSearch
+2020-05-08 23:49:44.9115 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.9115 Debug Error => ElasticSearch
+2020-05-08 23:49:44.9250 Debug Fatal => ElasticSearch
+2020-05-08 23:49:44.9673 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:49:44.9726 Debug Trace =>
+2020-05-08 23:49:44.9726 Debug Debug => ElasticSearch
+2020-05-08 23:49:44.9870 Debug Info => ElasticSearch
+2020-05-08 23:49:44.9870 Debug Warn => ElasticSearch
+2020-05-08 23:49:44.9870 Debug Error => ElasticSearch
+2020-05-08 23:49:45.0062 Debug Fatal => ElasticSearch
+2020-05-08 23:49:45.0062 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:49:45.0220 Debug Trace =>
+2020-05-08 23:49:45.0220 Debug Debug => ElasticSearch
+2020-05-08 23:49:45.0353 Debug Info => ElasticSearch
+2020-05-08 23:49:45.0353 Debug Warn => ElasticSearch
+2020-05-08 23:49:45.0479 Debug Error => ElasticSearch
+2020-05-08 23:49:45.0479 Debug Fatal => ElasticSearch
+2020-05-08 23:49:45.1442 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-05-08 23:49:45.1442 Debug Loading config from D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\Nlog.config
+2020-05-08 23:49:45.1583 Info Configuring from an XML element in D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\Nlog.config...
+2020-05-08 23:49:45.1583 Trace ParseNLogElement
+2020-05-08 23:49:45.1736 Trace ParseNLogConfig
+2020-05-08 23:49:45.1736 Info Message Template Auto Format enabled
+2020-05-08 23:49:45.1896 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:49:45.1896 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:49:45.2040 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:49:45.2040 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:49:45.2040 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:49:45.2250 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.2250 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:45.2383 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.2383 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:45.2383 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:49:45.2567 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:49:45.2567 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.2683 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:45.2683 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.2683 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:45.2874 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:45.2874 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:45.2999 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.2999 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:45.2999 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.3201 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:45.3201 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:45.3340 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:45.3340 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:49:45.3481 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:49:45.3481 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:49:45.3628 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:49:45.3628 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:49:45.3813 Trace ParseRulesElement
+2020-05-08 23:49:45.3813 Info Closing old configuration.
+2020-05-08 23:49:45.3967 Debug LogFactory Flush with timeout=15 secs
+2020-05-08 23:49:45.3967 Trace Flushing all 1 targets...
+2020-05-08 23:49:45.4171 Trace ForEachItemInParallel() 1 items
+2020-05-08 23:49:45.4274 Trace Continuation invoked: 
+2020-05-08 23:49:45.4274 Trace Parallel task completed. 0 items remaining
+2020-05-08 23:49:45.4424 Debug Flush completed
+2020-05-08 23:49:45.4424 Debug Closing logging configuration...
+2020-05-08 23:49:45.4553 Trace Closing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:45.4553 Debug Closing target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:49:45.4553 Debug Closed target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:49:45.4755 Trace Closing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:49:45.4755 Trace Closing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:49:45.4890 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:45.4890 Trace Closing Layout Renderer: ${date}
+2020-05-08 23:49:45.5017 Trace Closing 'logevent'
+2020-05-08 23:49:45.5017 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:45.5017 Trace Closing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:49:45.5202 Trace Closing Layout Renderer: ${longdate}
+2020-05-08 23:49:45.5202 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:45.5332 Trace Closing Layout Renderer: ${uppercase}
+2020-05-08 23:49:45.5332 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:49:45.5482 Trace Closing Layout Renderer: ${level}
+2020-05-08 23:49:45.5482 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:45.5482 Trace Closing Layout Renderer: ${logger}
+2020-05-08 23:49:45.5688 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:45.5688 Trace Closing Layout Renderer: ${message}
+2020-05-08 23:49:45.5833 Debug Finished closing logging configuration.
+2020-05-08 23:49:45.5833 Debug Stopping file watching for path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'NLog.config'
+2020-05-08 23:49:45.5981 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'Nlog.config' for changes.
+2020-05-08 23:49:45.5981 Debug --- NLog configuration dump ---
+2020-05-08 23:49:45.6183 Debug Targets:
+2020-05-08 23:49:45.6183 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:45.6309 Debug Rules:
+2020-05-08 23:49:45.6309 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:49:45.6431 Debug --- End of NLog configuration dump ---
+2020-05-08 23:49:45.6431 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:45.6431 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:49:45.6619 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:49:45.6619 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:45.6745 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:45.6745 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:45.6745 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:45.6927 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:45.6927 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.6927 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:45.7102 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:45.7102 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:45.7237 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:45.7237 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.7237 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:45.7413 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:45.7413 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:45.7548 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:45.7548 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.7683 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:45.7683 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:45.7683 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:45.7909 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:45.7909 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:45.8049 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.8049 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:45.8179 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:45.8179 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:45.8179 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:45.8355 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:45.8355 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:49:45.8490 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:49:45.8490 Info Found 18 configuration items
+2020-05-08 23:49:45.8624 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:49:45.8624 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:49:45.8624 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:49:45.8827 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:45.8827 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:49:45.8956 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:45.8956 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:49:45.9085 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:49:45.9085 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:45.9085 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:45.9283 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.9283 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:45.9419 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:49:45.9419 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:45.9553 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:49:45.9553 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:49:45.9553 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:45.9731 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:45.9731 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:45.9877 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:45.9877 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.0019 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:46.0019 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:46.0190 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:46.0190 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:46.0325 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:46.0325 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.0325 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:46.0522 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.0522 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:46.0661 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:46.0661 Trace Initializing 'logevent'
+2020-05-08 23:49:46.0661 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:46.0855 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:46.0855 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:46.0988 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.0988 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:49:46.1118 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:46.1118 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:49:46.1118 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:46.1313 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:46.1313 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:46.1452 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.1452 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:46.1587 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:49:46.1587 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:46.1587 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:46.1787 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:46.1787 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:46.1948 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:46.1948 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:46.2100 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:46.2199 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:46.2199 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:46.2199 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:49:46.2418 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:46.2418 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:49:46.2556 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:46.2556 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:46.2690 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:49:46.2690 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:46.2823 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:46.2823 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:46.2823 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:46.3023 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:46.3023 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:46.3148 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:46.3148 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:46.3148 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:46.3338 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:46.3338 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:46.3464 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:46.3464 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:49:46.3464 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:49:46.3657 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:49:46.3657 Debug Trace =>
+2020-05-08 23:49:46.3788 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.3788 Debug Info => ElasticSearch
+2020-05-08 23:49:46.3909 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.3909 Debug Error => ElasticSearch
+2020-05-08 23:49:46.3909 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.4102 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:49:46.4102 Debug Trace =>
+2020-05-08 23:49:46.4237 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.4237 Debug Info => ElasticSearch
+2020-05-08 23:49:46.4237 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.4434 Debug Error => ElasticSearch
+2020-05-08 23:49:46.4434 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.4560 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:49:46.4560 Debug Trace =>
+2020-05-08 23:49:46.4560 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.4747 Debug Info => ElasticSearch
+2020-05-08 23:49:46.4747 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.4872 Debug Error => ElasticSearch
+2020-05-08 23:49:46.4872 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.4872 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:49:46.5063 Debug Trace =>
+2020-05-08 23:49:46.5063 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.5186 Debug Info => ElasticSearch
+2020-05-08 23:49:46.5186 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.5186 Debug Error => ElasticSearch
+2020-05-08 23:49:46.5375 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.5375 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:49:46.5505 Debug Trace =>
+2020-05-08 23:49:46.5505 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.5634 Debug Info => ElasticSearch
+2020-05-08 23:49:46.5634 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.5634 Debug Error => ElasticSearch
+2020-05-08 23:49:46.5822 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.5822 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:49:46.5951 Debug Trace =>
+2020-05-08 23:49:46.5951 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.5951 Debug Info => ElasticSearch
+2020-05-08 23:49:46.6129 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.6129 Debug Error => ElasticSearch
+2020-05-08 23:49:46.6129 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.6327 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:49:46.6419 Debug Trace =>
+2020-05-08 23:49:46.6419 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.6589 Debug Info => ElasticSearch
+2020-05-08 23:49:46.6589 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.6589 Debug Error => ElasticSearch
+2020-05-08 23:49:46.6812 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.6894 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:49:46.6894 Debug Trace =>
+2020-05-08 23:49:46.7043 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.7043 Debug Info => ElasticSearch
+2020-05-08 23:49:46.7043 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.7248 Debug Error => ElasticSearch
+2020-05-08 23:49:46.7248 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.7487 Debug Targets for NetCore.API.Startup by level:
+2020-05-08 23:49:46.7543 Debug Trace =>
+2020-05-08 23:49:46.7543 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.7664 Debug Info => ElasticSearch
+2020-05-08 23:49:46.7664 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.7664 Debug Error => ElasticSearch
+2020-05-08 23:49:46.7849 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.7849 Debug Targets for Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware by level:
+2020-05-08 23:49:46.7992 Debug Trace =>
+2020-05-08 23:49:46.7992 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.7992 Debug Info => ElasticSearch
+2020-05-08 23:49:46.8187 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.8187 Debug Error => ElasticSearch
+2020-05-08 23:49:46.8336 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.8336 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-05-08 23:49:46.8487 Debug Trace =>
+2020-05-08 23:49:46.8487 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.8611 Debug Info => ElasticSearch
+2020-05-08 23:49:46.8611 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.8611 Debug Error => ElasticSearch
+2020-05-08 23:49:46.8788 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.8788 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-05-08 23:49:46.8788 Debug Trace =>
+2020-05-08 23:49:46.8959 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.8959 Debug Info => ElasticSearch
+2020-05-08 23:49:46.9078 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.9078 Debug Error => ElasticSearch
+2020-05-08 23:49:46.9078 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.9285 Debug Targets for Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware by level:
+2020-05-08 23:49:46.9285 Debug Trace =>
+2020-05-08 23:49:46.9403 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.9403 Debug Info => ElasticSearch
+2020-05-08 23:49:46.9403 Debug Warn => ElasticSearch
+2020-05-08 23:49:46.9586 Debug Error => ElasticSearch
+2020-05-08 23:49:46.9586 Debug Fatal => ElasticSearch
+2020-05-08 23:49:46.9806 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-05-08 23:49:46.9863 Debug Trace =>
+2020-05-08 23:49:46.9863 Debug Debug => ElasticSearch
+2020-05-08 23:49:46.9863 Debug Info => ElasticSearch
+2020-05-08 23:49:47.0042 Debug Warn => ElasticSearch
+2020-05-08 23:49:47.0042 Debug Error => ElasticSearch
+2020-05-08 23:49:47.0042 Debug Fatal => ElasticSearch
+2020-05-08 23:49:47.0225 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-05-08 23:49:47.0225 Debug Trace =>
+2020-05-08 23:49:47.0360 Debug Debug => ElasticSearch
+2020-05-08 23:49:47.0360 Debug Info => ElasticSearch
+2020-05-08 23:49:47.0505 Debug Warn => ElasticSearch
+2020-05-08 23:49:47.0505 Debug Error => ElasticSearch
+2020-05-08 23:49:47.0505 Debug Fatal => ElasticSearch
+2020-05-08 23:49:47.0735 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-05-08 23:49:47.0796 Debug Trace =>
+2020-05-08 23:49:47.0796 Debug Debug => ElasticSearch
+2020-05-08 23:49:47.0796 Debug Info => ElasticSearch
+2020-05-08 23:49:47.0976 Debug Warn => ElasticSearch
+2020-05-08 23:49:47.0976 Debug Error => ElasticSearch
+2020-05-08 23:49:47.1100 Debug Fatal => ElasticSearch
+2020-05-08 23:49:47.3677 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-05-08 23:49:47.3677 Debug Trace =>
+2020-05-08 23:49:47.3807 Debug Debug => ElasticSearch
+2020-05-08 23:49:47.3807 Debug Info => ElasticSearch
+2020-05-08 23:49:47.3960 Debug Warn => ElasticSearch
+2020-05-08 23:49:47.3960 Debug Error => ElasticSearch
+2020-05-08 23:49:47.4087 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.5384 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-05-08 23:49:48.5384 Debug Trace =>
+2020-05-08 23:49:48.5512 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.5512 Debug Info => ElasticSearch
+2020-05-08 23:49:48.5650 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.5650 Debug Error => ElasticSearch
+2020-05-08 23:49:48.5650 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.6044 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-05-08 23:49:48.6044 Debug Trace =>
+2020-05-08 23:49:48.6170 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.6170 Debug Info => ElasticSearch
+2020-05-08 23:49:48.6313 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.6313 Debug Error => ElasticSearch
+2020-05-08 23:49:48.6445 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.6570 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-05-08 23:49:48.6570 Debug Trace =>
+2020-05-08 23:49:48.6570 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.6754 Debug Info => ElasticSearch
+2020-05-08 23:49:48.6754 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.6886 Debug Error => ElasticSearch
+2020-05-08 23:49:48.6886 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.7041 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-05-08 23:49:48.7041 Debug Trace =>
+2020-05-08 23:49:48.7041 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.7258 Debug Info => ElasticSearch
+2020-05-08 23:49:48.7258 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.7377 Debug Error => ElasticSearch
+2020-05-08 23:49:48.7377 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.7525 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter by level:
+2020-05-08 23:49:48.7525 Debug Trace =>
+2020-05-08 23:49:48.7525 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.7705 Debug Info => ElasticSearch
+2020-05-08 23:49:48.7705 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.7845 Debug Error => ElasticSearch
+2020-05-08 23:49:48.7845 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.7985 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter by level:
+2020-05-08 23:49:48.7985 Debug Trace =>
+2020-05-08 23:49:48.8141 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.8141 Debug Info => ElasticSearch
+2020-05-08 23:49:48.8303 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.8303 Debug Error => ElasticSearch
+2020-05-08 23:49:48.8466 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.8828 Debug Targets for NetCore.API.Controllers.WeatherForecastController by level:
+2020-05-08 23:49:48.8828 Debug Trace =>
+2020-05-08 23:49:48.8971 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.8971 Debug Info => ElasticSearch
+2020-05-08 23:49:48.9121 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.9121 Debug Error => ElasticSearch
+2020-05-08 23:49:48.9276 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.9432 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector by level:
+2020-05-08 23:49:48.9432 Debug Trace =>
+2020-05-08 23:49:48.9595 Debug Debug => ElasticSearch
+2020-05-08 23:49:48.9595 Debug Info => ElasticSearch
+2020-05-08 23:49:48.9736 Debug Warn => ElasticSearch
+2020-05-08 23:49:48.9736 Debug Error => ElasticSearch
+2020-05-08 23:49:48.9881 Debug Fatal => ElasticSearch
+2020-05-08 23:49:48.9881 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor by level:
+2020-05-08 23:49:49.0046 Debug Trace =>
+2020-05-08 23:49:49.0046 Debug Debug => ElasticSearch
+2020-05-08 23:49:49.0179 Debug Info => ElasticSearch
+2020-05-08 23:49:49.0179 Debug Warn => ElasticSearch
+2020-05-08 23:49:49.0317 Debug Error => ElasticSearch
+2020-05-08 23:49:49.0317 Debug Fatal => ElasticSearch
+2020-05-08 23:49:53.7348 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-05-08 23:49:53.7413 Debug Trace =>
+2020-05-08 23:49:53.7413 Debug Debug => ElasticSearch
+2020-05-08 23:49:53.7567 Debug Info => ElasticSearch
+2020-05-08 23:49:53.7567 Debug Warn => ElasticSearch
+2020-05-08 23:49:53.7736 Debug Error => ElasticSearch
+2020-05-08 23:49:53.7736 Debug Fatal => ElasticSearch
+2020-05-08 23:49:53.7932 Debug Targets for NetCore.API.Controllers.LogController by level:
+2020-05-08 23:49:53.7999 Debug Trace =>
+2020-05-08 23:49:53.7999 Debug Debug => ElasticSearch
+2020-05-08 23:49:53.8154 Debug Info => ElasticSearch
+2020-05-08 23:49:53.8154 Debug Warn => ElasticSearch
+2020-05-08 23:49:53.8295 Debug Error => ElasticSearch
+2020-05-08 23:49:53.8295 Debug Fatal => ElasticSearch
+2020-05-08 23:49:53.8657 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-05-08 23:49:53.8657 Debug Loading config from D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config
+2020-05-08 23:49:53.8804 Info Configuring from an XML element in D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1\nlog.config...
+2020-05-08 23:49:53.8804 Trace ParseNLogElement
+2020-05-08 23:49:53.8940 Trace ParseNLogConfig
+2020-05-08 23:49:53.8940 Info Message Template Auto Format enabled
+2020-05-08 23:49:53.9120 Info Loading assembly: NLog.Targets.ElasticSearch
+2020-05-08 23:49:53.9120 Debug ScanAssembly('NLog.Targets.ElasticSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3eb62cd298662c6a')
+2020-05-08 23:49:53.9290 Debug Setting 'BufferingTargetWrapper.name' to 'ElasticSearch'
+2020-05-08 23:49:53.9290 Debug Setting 'BufferingTargetWrapper.flushTimeout' to '5000'
+2020-05-08 23:49:53.9445 Debug Setting 'DateLayoutRenderer.format' to 'yyyy.MM.dd'
+2020-05-08 23:49:53.9445 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:53.9595 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:53.9595 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:53.9729 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:53.9729 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-05-08 23:49:53.9865 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-05-08 23:49:53.9865 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:53.9865 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:54.0060 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:54.0060 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:54.0196 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:54.0196 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:54.0323 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.0323 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:54.0323 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:54.0532 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:54.0532 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-05-08 23:49:54.0663 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:54.0663 Debug Setting 'ElasticSearchTarget.uri' to 'hostelasticsearch'
+2020-05-08 23:49:54.0798 Debug Setting 'ElasticSearchTarget.includeAllProperties' to 'true'
+2020-05-08 23:49:54.0798 Debug Registered target ElasticSearch: NLog.Targets.ElasticSearch.ElasticSearchTarget
+2020-05-08 23:49:54.0960 Info Adding target BufferingTargetWrapper(Name=ElasticSearch)
+2020-05-08 23:49:54.0960 Debug Registered target ElasticSearch: NLog.Targets.Wrappers.BufferingTargetWrapper
+2020-05-08 23:49:54.1123 Trace ParseRulesElement
+2020-05-08 23:49:54.1123 Info Closing old configuration.
+2020-05-08 23:49:54.1287 Debug LogFactory Flush with timeout=15 secs
+2020-05-08 23:49:54.1287 Trace Flushing all 1 targets...
+2020-05-08 23:49:54.1432 Trace ForEachItemInParallel() 1 items
+2020-05-08 23:49:54.1432 Trace Continuation invoked: 
+2020-05-08 23:49:54.1573 Trace Parallel task completed. 0 items remaining
+2020-05-08 23:49:54.1573 Debug Flush completed
+2020-05-08 23:49:54.1725 Debug Closing logging configuration...
+2020-05-08 23:49:54.1725 Trace Closing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:54.1725 Debug Closing target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:49:54.1942 Debug Closed target 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'.
+2020-05-08 23:49:54.1942 Trace Closing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:49:54.2067 Trace Closing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:49:54.2067 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:54.2213 Trace Closing Layout Renderer: ${date}
+2020-05-08 23:49:54.2213 Trace Closing 'logevent'
+2020-05-08 23:49:54.2213 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:54.2427 Trace Closing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:49:54.2427 Trace Closing Layout Renderer: ${longdate}
+2020-05-08 23:49:54.2600 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:54.2673 Trace Closing Layout Renderer: ${uppercase}
+2020-05-08 23:49:54.2673 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:49:54.2827 Trace Closing Layout Renderer: ${level}
+2020-05-08 23:49:54.2827 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:54.2986 Trace Closing Layout Renderer: ${logger}
+2020-05-08 23:49:54.2986 Trace Closing Layout Renderer: ${literal}
+2020-05-08 23:49:54.3148 Trace Closing Layout Renderer: ${message}
+2020-05-08 23:49:54.3148 Debug Finished closing logging configuration.
+2020-05-08 23:49:54.3148 Debug Stopping file watching for path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'Nlog.config'
+2020-05-08 23:49:54.3326 Debug Watching path 'D:\Visual Studio 2019 Repo\NetCoreDocker\NetCore.API\bin\Debug\netcoreapp3.1' filter 'nlog.config' for changes.
+2020-05-08 23:49:54.3326 Debug --- NLog configuration dump ---
+2020-05-08 23:49:54.3469 Debug Targets:
+2020-05-08 23:49:54.3469 Debug BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:54.3605 Debug Rules:
+2020-05-08 23:49:54.3605 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]
+2020-05-08 23:49:54.3605 Debug --- End of NLog configuration dump ---
+2020-05-08 23:49:54.3795 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:54.3795 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ElasticSearch ]'
+2020-05-08 23:49:54.3940 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-05-08 23:49:54.3940 Trace  Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:54.4065 Trace   Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:54.4065 Trace   Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:54.4065 Trace    Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:54.4275 Trace    Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:54.4275 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.4417 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.4417 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:54.4555 Trace    Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:54.4555 Trace    Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:54.4695 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.4695 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.4695 Trace    Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:54.4899 Trace    Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:54.4899 Trace    Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:54.5055 Trace     Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.5055 Trace     Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:54.5201 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.5201 Trace     Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:54.5330 Trace      Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:54.5330 Trace      Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:54.5330 Trace       Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.5544 Trace       Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:54.5544 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.5685 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:54.5685 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.5822 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:54.5822 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-05-08 23:49:54.5954 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-05-08 23:49:54.5954 Info Found 18 configuration items
+2020-05-08 23:49:54.5954 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2020-05-08 23:49:54.6163 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2020-05-08 23:49:54.6163 Trace Initializing Layout Renderer: ${message}
+2020-05-08 23:49:54.6304 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:54.6304 Trace Initializing Layout Renderer: ${logger}
+2020-05-08 23:49:54.6445 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:54.6445 Trace Initializing Layout Renderer: ${level}
+2020-05-08 23:49:54.6585 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-05-08 23:49:54.6585 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:54.6585 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:54.6786 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.6786 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:54.6933 Trace Initializing Layout Renderer: ${uppercase}
+2020-05-08 23:49:54.6933 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:54.7075 Trace Initializing Layout Renderer: ${longdate}
+2020-05-08 23:49:54.7075 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-05-08 23:49:54.7220 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:54.7220 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:54.7356 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.7356 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-05-08 23:49:54.7356 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.7539 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-05-08 23:49:54.7539 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-05-08 23:49:54.7679 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-05-08 23:49:54.7679 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.7679 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-05-08 23:49:54.7871 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.7871 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-05-08 23:49:54.8005 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.8005 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-05-08 23:49:54.8141 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:54.8141 Trace Initializing 'logevent'
+2020-05-08 23:49:54.8141 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:54.8334 Trace Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:54.8334 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.8464 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.8464 Trace Initializing Layout Renderer: ${date}
+2020-05-08 23:49:54.8606 Trace Initializing Layout Renderer: ${literal}
+2020-05-08 23:49:54.8606 Trace Initializing 'logstash-${date:format=yyyy.MM.dd}'
+2020-05-08 23:49:54.8606 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:54.8810 Trace Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:54.8810 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:54.8983 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:54.9070 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2020-05-08 23:49:54.9070 Trace Initializing ElasticSearch Target[ElasticSearch]
+2020-05-08 23:49:54.9234 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:54.9234 Trace Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:54.9387 Trace  Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:54.9387 Trace  Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:54.9556 Trace  Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:54.9556 Trace  Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:54.9696 Trace  Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:54.9696 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:54.9696 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:54.9917 Trace ElasticSearch Target[ElasticSearch] has 3 layouts
+2020-05-08 23:49:54.9917 Trace FindReachableObject<System.Object>:
+2020-05-08 23:49:55.0062 Trace Scanning SimpleLayout ''hostelasticsearch''
+2020-05-08 23:49:55.0062 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-05-08 23:49:55.0213 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-05-08 23:49:55.0213 Error ElasticSearch Target[ElasticSearch]: Error initializing target Exception: System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.<>c.<InitializeTarget>b__103_1(String url)
+   at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Elasticsearch.Net.StaticConnectionPool.Initialize(IEnumerable`1 nodes, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, Nullable`1 randomizeSeed, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 nodes, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at Elasticsearch.Net.StaticConnectionPool..ctor(IEnumerable`1 uris, Boolean randomize, IDateTimeProvider dateTimeProvider)
+   at NLog.Targets.ElasticSearch.ElasticSearchTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-05-08 23:49:55.0369 Trace Initializing BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])
+2020-05-08 23:49:55.0369 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-05-08 23:49:55.0512 Trace Scanning BufferingTargetWrapper 'BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch])'
+2020-05-08 23:49:55.0512 Trace  Scanning Property WrappedTarget 'ElasticSearch Target[ElasticSearch]' NLog.Targets
+2020-05-08 23:49:55.0635 Trace  Scanning ElasticSearchTarget 'ElasticSearch Target[ElasticSearch]'
+2020-05-08 23:49:55.0635 Trace   Scanning Property Index ''logstash-${date:format=yyyy.MM.dd}'' NLog.Layouts
+2020-05-08 23:49:55.0635 Trace   Scanning SimpleLayout ''logstash-${date:format=yyyy.MM.dd}''
+2020-05-08 23:49:55.0835 Trace   Scanning Property DocumentType ''logevent'' NLog.Layouts
+2020-05-08 23:49:55.0835 Trace   Scanning SimpleLayout ''logevent''
+2020-05-08 23:49:55.0947 Trace   Scanning Property Fields 'System.Collections.Generic.List`1[NLog.Targets.ElasticSearch.Field]' System.Collections.Generic
+2020-05-08 23:49:55.0947 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-05-08 23:49:55.0947 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-05-08 23:49:55.1150 Trace BufferingWrapper Target[ElasticSearch](ElasticSearch Target[ElasticSearch]) has 3 layouts
+2020-05-08 23:49:55.1150 Trace BufferingWrapper(Name=ElasticSearch): Create Timer
+2020-05-08 23:49:55.1305 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-05-08 23:49:55.1305 Debug Trace =>
+2020-05-08 23:49:55.1421 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.1421 Debug Info => ElasticSearch
+2020-05-08 23:49:55.1421 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.1637 Debug Error => ElasticSearch
+2020-05-08 23:49:55.1637 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.1775 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-05-08 23:49:55.1775 Debug Trace =>
+2020-05-08 23:49:55.1923 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.1923 Debug Info => ElasticSearch
+2020-05-08 23:49:55.2057 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.2057 Debug Error => ElasticSearch
+2020-05-08 23:49:55.2057 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.2256 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-05-08 23:49:55.2256 Debug Trace =>
+2020-05-08 23:49:55.2395 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.2395 Debug Info => ElasticSearch
+2020-05-08 23:49:55.2533 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.2533 Debug Error => ElasticSearch
+2020-05-08 23:49:55.2533 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.2732 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-05-08 23:49:55.2732 Debug Trace =>
+2020-05-08 23:49:55.2866 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.2866 Debug Info => ElasticSearch
+2020-05-08 23:49:55.3000 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.3000 Debug Error => ElasticSearch
+2020-05-08 23:49:55.3000 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.3193 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-05-08 23:49:55.3193 Debug Trace =>
+2020-05-08 23:49:55.3337 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.3337 Debug Info => ElasticSearch
+2020-05-08 23:49:55.3504 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.3504 Debug Error => ElasticSearch
+2020-05-08 23:49:55.3655 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.3655 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-05-08 23:49:55.3840 Debug Trace =>
+2020-05-08 23:49:55.3840 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.3971 Debug Info => ElasticSearch
+2020-05-08 23:49:55.3971 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.4100 Debug Error => ElasticSearch
+2020-05-08 23:49:55.4100 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.4228 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-05-08 23:49:55.4228 Debug Trace =>
+2020-05-08 23:49:55.4228 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.4409 Debug Info => ElasticSearch
+2020-05-08 23:49:55.4409 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.4549 Debug Error => ElasticSearch
+2020-05-08 23:49:55.4549 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.4549 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-05-08 23:49:55.4752 Debug Trace =>
+2020-05-08 23:49:55.4752 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.4883 Debug Info => ElasticSearch
+2020-05-08 23:49:55.4883 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.5023 Debug Error => ElasticSearch
+2020-05-08 23:49:55.5023 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.5023 Debug Targets for NetCore.API.Startup by level:
+2020-05-08 23:49:55.5236 Debug Trace =>
+2020-05-08 23:49:55.5236 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.5376 Debug Info => ElasticSearch
+2020-05-08 23:49:55.5376 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.5508 Debug Error => ElasticSearch
+2020-05-08 23:49:55.5508 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.5648 Debug Targets for Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware by level:
+2020-05-08 23:49:55.5648 Debug Trace =>
+2020-05-08 23:49:55.5648 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.5833 Debug Info => ElasticSearch
+2020-05-08 23:49:55.5833 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.5956 Debug Error => ElasticSearch
+2020-05-08 23:49:55.5956 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.5956 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-05-08 23:49:55.6155 Debug Trace =>
+2020-05-08 23:49:55.6155 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.6275 Debug Info => ElasticSearch
+2020-05-08 23:49:55.6275 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.6275 Debug Error => ElasticSearch
+2020-05-08 23:49:55.6484 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.6484 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-05-08 23:49:55.6626 Debug Trace =>
+2020-05-08 23:49:55.6626 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.6764 Debug Info => ElasticSearch
+2020-05-08 23:49:55.6764 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.6891 Debug Error => ElasticSearch
+2020-05-08 23:49:55.6891 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.6891 Debug Targets for Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware by level:
+2020-05-08 23:49:55.7069 Debug Trace =>
+2020-05-08 23:49:55.7069 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.7197 Debug Info => ElasticSearch
+2020-05-08 23:49:55.7197 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.7197 Debug Error => ElasticSearch
+2020-05-08 23:49:55.7387 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.7387 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-05-08 23:49:55.7532 Debug Trace =>
+2020-05-08 23:49:55.7532 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.7532 Debug Info => ElasticSearch
+2020-05-08 23:49:55.7722 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.7722 Debug Error => ElasticSearch
+2020-05-08 23:49:55.7853 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.7853 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-05-08 23:49:55.7975 Debug Trace =>
+2020-05-08 23:49:55.7975 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.7975 Debug Info => ElasticSearch
+2020-05-08 23:49:55.8154 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.8154 Debug Error => ElasticSearch
+2020-05-08 23:49:55.8286 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.8286 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-05-08 23:49:55.8286 Debug Trace =>
+2020-05-08 23:49:55.8489 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.8489 Debug Info => ElasticSearch
+2020-05-08 23:49:55.8608 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.8608 Debug Error => ElasticSearch
+2020-05-08 23:49:55.8608 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.8812 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-05-08 23:49:55.8812 Debug Trace =>
+2020-05-08 23:49:55.8962 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.8962 Debug Info => ElasticSearch
+2020-05-08 23:49:55.9093 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.9093 Debug Error => ElasticSearch
+2020-05-08 23:49:55.9248 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.9248 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-05-08 23:49:55.9385 Debug Trace =>
+2020-05-08 23:49:55.9385 Debug Debug => ElasticSearch
+2020-05-08 23:49:55.9540 Debug Info => ElasticSearch
+2020-05-08 23:49:55.9540 Debug Warn => ElasticSearch
+2020-05-08 23:49:55.9540 Debug Error => ElasticSearch
+2020-05-08 23:49:55.9744 Debug Fatal => ElasticSearch
+2020-05-08 23:49:55.9744 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-05-08 23:49:55.9881 Debug Trace =>
+2020-05-08 23:49:55.9881 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.0053 Debug Info => ElasticSearch
+2020-05-08 23:49:56.0053 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.0234 Debug Error => ElasticSearch
+2020-05-08 23:49:56.0234 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.0378 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-05-08 23:49:56.0378 Debug Trace =>
+2020-05-08 23:49:56.0514 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.0514 Debug Info => ElasticSearch
+2020-05-08 23:49:56.0640 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.0640 Debug Error => ElasticSearch
+2020-05-08 23:49:56.0640 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.0813 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-05-08 23:49:56.0813 Debug Trace =>
+2020-05-08 23:49:56.0943 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.0943 Debug Info => ElasticSearch
+2020-05-08 23:49:56.0943 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.1120 Debug Error => ElasticSearch
+2020-05-08 23:49:56.1120 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.1120 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter by level:
+2020-05-08 23:49:56.1320 Debug Trace =>
+2020-05-08 23:49:56.1320 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.1452 Debug Info => ElasticSearch
+2020-05-08 23:49:56.1452 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.1586 Debug Error => ElasticSearch
+2020-05-08 23:49:56.1586 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.1586 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter by level:
+2020-05-08 23:49:56.1792 Debug Trace =>
+2020-05-08 23:49:56.1792 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.1928 Debug Info => ElasticSearch
+2020-05-08 23:49:56.1928 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.2040 Debug Error => ElasticSearch
+2020-05-08 23:49:56.2040 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.2040 Debug Targets for NetCore.API.Controllers.WeatherForecastController by level:
+2020-05-08 23:49:56.2230 Debug Trace =>
+2020-05-08 23:49:56.2230 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.2364 Debug Info => ElasticSearch
+2020-05-08 23:49:56.2364 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.2364 Debug Error => ElasticSearch
+2020-05-08 23:49:56.2559 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.2559 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector by level:
+2020-05-08 23:49:56.2701 Debug Trace =>
+2020-05-08 23:49:56.2701 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.2701 Debug Info => ElasticSearch
+2020-05-08 23:49:56.2885 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.2885 Debug Error => ElasticSearch
+2020-05-08 23:49:56.3018 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.3018 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor by level:
+2020-05-08 23:49:56.3143 Debug Trace =>
+2020-05-08 23:49:56.3143 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.3143 Debug Info => ElasticSearch
+2020-05-08 23:49:56.3326 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.3326 Debug Error => ElasticSearch
+2020-05-08 23:49:56.3457 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.3457 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-05-08 23:49:56.3608 Debug Trace =>
+2020-05-08 23:49:56.3608 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.3608 Debug Info => ElasticSearch
+2020-05-08 23:49:56.3807 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.3807 Debug Error => ElasticSearch
+2020-05-08 23:49:56.3929 Debug Fatal => ElasticSearch
+2020-05-08 23:49:56.3929 Debug Targets for NetCore.API.Controllers.LogController by level:
+2020-05-08 23:49:56.3929 Debug Trace =>
+2020-05-08 23:49:56.4109 Debug Debug => ElasticSearch
+2020-05-08 23:49:56.4109 Debug Info => ElasticSearch
+2020-05-08 23:49:56.4238 Debug Warn => ElasticSearch
+2020-05-08 23:49:56.4238 Debug Error => ElasticSearch
+2020-05-08 23:49:56.4238 Debug Fatal => ElasticSearch
