@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace NetCore.API.Controllers
 {
@@ -35,7 +36,7 @@ namespace NetCore.API.Controllers
             })
             .ToArray();
 
-            _logger.LogInformation("Weather Forecast", result);
+            _logger.LogInformation("Weather Forecast", JsonConvert.SerializeObject(result));
 
             return result;
         }

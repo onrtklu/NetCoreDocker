@@ -57,7 +57,7 @@ namespace NetCore.API
                 endpoints.MapControllers();
             });
 
-            var logger = NLogBuilder.ConfigureNLog("Nlog.config").GetCurrentClassLogger();
+            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
             app.UseExceptionHandler(opt =>
             {
@@ -73,6 +73,7 @@ namespace NetCore.API
                 });
             });
 
+            app.UseHttpsRedirection();
         }
     }
 }
